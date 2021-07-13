@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "947912729488",
+    "firebase_url": "https://canzstudiofirstproject-default-rtdb.firebaseio.com",
+    "project_id": "canzstudiofirstproject",
+    "storage_bucket": "canzstudiofirstproject.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:947912729488:android:144f323134c439ad60c915",
+        "android_client_info": {
+          "package_name": "com.myloginapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "947912729488-fobc5sg47mc7dfk87gekrqu0fefn4ch5.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.myloginapp",
+            "certificate_hash": "4c66d45edef2460f6012091608029dc5a7e50669"
+          }
+        },
+        {
+          "client_id": "947912729488-r3liqo93i19udp5gspk0nq4jb6tsptap.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAL5DxvesuZrTImDM-JDzoIhDjEOro6Jek"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "947912729488-r3liqo93i19udp5gspk0nq4jb6tsptap.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

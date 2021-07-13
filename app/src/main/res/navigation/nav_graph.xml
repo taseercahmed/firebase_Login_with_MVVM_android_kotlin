@@ -2,7 +2,7 @@
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/nav_graph"
-    app:startDestination="@id/LoginWithPhone">
+    app:startDestination="@id/HomeFragment">
 
     <fragment
         android:id="@+id/loginRegisterFragment"
@@ -28,6 +28,22 @@
         <action
             android:id="@+id/action_loginRegisterFragment_to_loggedInFragment"
             app:destination="@id/loggedInFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/HomeFragment"
+        android:name="com.myloginapp.view.HomeFragment"
+        android:label="HomeFragment" >
+
+        <action
+            android:id="@+id/action_loginRegisterFragment_to_loggedInFragment"
+            app:destination="@id/loggedInFragment" />
+        <action
+            android:id="@+id/action_loggedInFragment_to_loginRegisterFragment"
+            app:destination="@id/loginRegisterFragment" />
+        <action
+            android:id="@+id/action_loginRegisterFragment_to_loggedInFragment76"
+            app:destination="@id/LoginWithPhone" />
+
     </fragment>
 
 </navigation>

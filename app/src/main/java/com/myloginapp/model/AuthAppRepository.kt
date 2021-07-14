@@ -89,7 +89,7 @@ class AuthAppRepository(application: Application?) {
         Log.e("112233phone",phoneNumber.toString())
         PhoneAuthProvider.getInstance().verifyPhoneNumber(
             phoneNumber.toString(),  // Phone number to verify
-            20,  // Timeout duration
+            60,  // Timeout duration
             TimeUnit.SECONDS,  // Unit of timeout
             mycontext as Activity,  // Activity (for callback binding)
             mCallbacks

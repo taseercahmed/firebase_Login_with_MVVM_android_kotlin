@@ -63,7 +63,7 @@ class LoggedInFragment : Fragment() {
         val view: View = inflater.inflate(R.layout.fragment_logged_in, container, false)
         loggedInUserTextView = view.findViewById(R.id.fragment_loggedin_loggedInUser)
         logOutButton = view.findViewById(R.id.fragment_loggedin_logOut)
-        loggedInUserTextView!!.text= loginRegisterViewModel!!.getcodeSentbyPhone().toString();
+
         logOutButton?.setOnClickListener{
             loggedInViewModel!!.logOut()
         }

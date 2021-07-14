@@ -16,20 +16,20 @@ class LoginRegisterViewModel(application: Application) : AndroidViewModel(applic
 
     private var authAppRepository: AuthAppRepository? = null
     private var userLiveData: MutableLiveData<FirebaseUser>? = null
-    private var codeSentbyPhone:String?=null
+     var codeSentbyPhone:MutableLiveData<String>?=null
 
     init{
 
         authAppRepository = AuthAppRepository(application)
         userLiveData = authAppRepository!!.getUserLiveData()
-
+        codeSentbyPhone= MutableLiveData()
     }
      fun setCode(code:String){
-         codeSentbyPhone=code
+         Log.e("1122334code",code)
+         codeSentbyPhone!!.value=code
+         Log.e("1122334code77", codeSentbyPhone!!.value.toString())
      }
-    fun getcodeSentbyPhone():String? {
-        return codeSentbyPhone;
-    }
+
     fun login(email: String?, password: String?) {
         authAppRepository!!.login(email, password)
     }

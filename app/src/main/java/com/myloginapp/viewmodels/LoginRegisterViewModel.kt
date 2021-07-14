@@ -4,10 +4,13 @@ import android.app.Application
 import android.content.Context
 import android.os.Build
 import android.util.Log
+import android.view.View
 import androidx.annotation.RequiresApi
+import androidx.fragment.app.FragmentActivity
 import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.MutableLiveData
 import com.google.firebase.auth.FirebaseUser
+import com.google.firebase.auth.PhoneAuthCredential
 import com.google.firebase.auth.PhoneAuthProvider
 import com.myloginapp.model.AuthAppRepository
 
@@ -50,5 +53,28 @@ class LoginRegisterViewModel(application: Application) : AndroidViewModel(applic
 
     fun getUserLiveData(): MutableLiveData<FirebaseUser>? {
         return userLiveData
+    }
+
+    fun googleSignIn(
+        idToken: String,
+        requireView: View,
+        actionLoginregisterfragmentToLoggedinfragment: Int,
+
+        ) {
+        authAppRepository?.firebaseAuthWithGoogle(idToken,actionLoginregisterfragmentToLoggedinfragment,requireView)
+    }
+    fun anonymousFirebaseAuth(
+        requireActivity: View,
+        actionLoginregisterfragmentToLoggedinfragment: Int
+    ) {
+        authAppRepository?.firebaseAuthWithAnonymous(requireActivity,actionLoginregisterfragmentToLoggedinfragment)
+    }
+
+    fun signInWithCredential(
+        credential: PhoneAuthCredential,
+        requireView: View,
+        actionLoginphoneToLoggedinphonecode: Int
+    ) {
+        authAppRepository?.signInWithCredential2(credential,requireView,actionLoginphoneToLoggedinphonecode)
     }
 }

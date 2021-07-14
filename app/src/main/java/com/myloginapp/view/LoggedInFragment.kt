@@ -33,23 +33,21 @@ class LoggedInFragment : Fragment() {
 
         loginRegisterViewModel=ViewModelProvider(this).get(LoginRegisterViewModel::class.java)
 
-//        loginRegisterViewModel!!.getcodeSentbyPhone()!!.observe(this,{
-//            loggedInUserTextView!!.text=it+"kjkjjh"
-//        })
-//        loggedInViewModel!!.userLiveData!!.observe(this,{
-//            if (it != null) {
-//                loggedInUserTextView!!.text = "Logged In User: " + it.email
-//                logOutButton?.setEnabled(true)
-//            } else {
-//                logOutButton?.setEnabled(false)
-//            }
-//        })
+
+        loggedInViewModel!!.userLiveData!!.observe(this,{
+            if (it != null) {
+                loggedInUserTextView!!.text = "Logged In User: " + it.uid
+                logOutButton?.setEnabled(true)
+            } else {
+                logOutButton?.setEnabled(false)
+            }
+        })
 
         loggedInViewModel!!.loggedOutLiveData!!.observe(this, {
             if (it) {
                 Toast.makeText(context, "User Logged Out", Toast.LENGTH_SHORT).show()
                 Navigation.findNavController(requireView())
-                    .navigate(R.id.action_loggedInFragment_to_loginRegisterFragment)
+                    .navigate(R.id.action_logoutto_to_Homefragment)
             }
         })
     }

@@ -20,7 +20,11 @@
         <action
             android:id="@+id/action_loggedInFragment_to_loginRegisterFragment"
             app:destination="@id/loginRegisterFragment" />
+        <action
+            android:id="@+id/action_logoutto_to_Homefragment"
+            app:destination="@id/HomeFragment" />
     </fragment>
+
 
     <fragment
         android:id="@+id/LoginWithPhone"
@@ -29,36 +33,14 @@
         <action
             android:id="@+id/action_loginRegisterFragment_to_loggedInFragment"
             app:destination="@id/loggedInFragment" />
-        <action
-            android:id="@+id/action_loginphone_to_loggedInphonecode"
-            app:destination="@id/LoginWithPhoneCode" />
+
 
     </fragment>
 
-    <fragment
-        android:id="@+id/LoginWithPhoneCode"
-        android:name="com.myloginapp.view.PhoneCodeEnterScreen"
-        android:label="PhoneCodeEnterScreen" >
-        <action
-            android:id="@+id/action_LoginWithPhoneCode_to_PhoneCodeEnterScreen"
-            app:destination="@id/loggedInFragment" />
-    </fragment>
-    <fragment
-        android:id="@+id/HomeFragment"
-        android:name="com.myloginapp.view.HomeFragment"
-        android:label="HomeFragment" >
 
-        <action
-            android:id="@+id/action_loginRegisterFragment_to_loggedInFragment"
-            app:destination="@id/loggedInFragment" />
-        <action
-            android:id="@+id/action_loggedInFragment_to_loginRegisterFragment"
-            app:destination="@id/loginRegisterFragment" />
-        <action
-            android:id="@+id/action_loginRegisterFragment_to_loggedInFragment76"
-            app:destination="@id/LoginWithPhone" />
 
-    </fragment>
+
+
     <fragment
         android:id="@+id/HomeFragment"
         android:name="com.myloginapp.view.HomeFragment"
